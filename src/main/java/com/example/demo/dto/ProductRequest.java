@@ -1,0 +1,16 @@
+package com.example.productapi.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class ProductRequest {
+
+    @NotBlank(message = "Product name is required")
+    private String productName;
+
+    @NotBlank(message = "Created by is required")
+    private String createdBy;
+}
